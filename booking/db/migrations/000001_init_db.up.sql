@@ -58,6 +58,7 @@ CREATE TABLE "cinema_hall" (
 
 CREATE TABLE "cinema_seat" (
   "id" bigserial PRIMARY KEY,
+  "type" int NOT NULL DEFAULT '0',
   "cinema_hall_id" bigint NOT NULL,
   "seat_number" varchar NOT NULL
 );
@@ -75,15 +76,15 @@ CREATE TABLE "show_seat" (
   "id" bigserial PRIMARY KEY,
   "cinema_seat_id" bigint NOT NULL,
   "show_id" bigint NOT NULL,
-  "booking" bigint NOT NULL,
+  "booking_id" bigint NOT NULL,
   "status" int NOT NULL,
   "price" decimal(8,2) NOT NULL
 );
 
 CREATE TABLE "booking" (
   "id" bigserial PRIMARY KEY,
-  "user_id" bigint,
-  "show_id" bigint,
+  "user_id" bigint NOT NULL,
+  "show_id" bigint NOT NULL,
   "seat_number" varchar NOT NULL,
   "created_at" timestamp NOT NULL DEFAULT (now()),
   "status" int NOT NULL
@@ -132,6 +133,10 @@ COMMENT ON COLUMN "movie"."star" IS '主演明星';
 
 COMMENT ON COLUMN "movie"."wish_count" IS '想看人数';
 
+COMMENT ON COLUMN "cinema_seat"."type" IS '可用/损坏/闲置';
+
+COMMENT ON COLUMN "cinema_seat"."seat_number" IS '位置编号，如（1排2座）';
+
 ALTER TABLE "oauths" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id");
 
 ALTER TABLE "cinema" ADD FOREIGN KEY ("city_id") REFERENCES "city" ("id");
@@ -148,7 +153,7 @@ ALTER TABLE "show_seat" ADD FOREIGN KEY ("cinema_seat_id") REFERENCES "cinema_se
 
 ALTER TABLE "show_seat" ADD FOREIGN KEY ("show_id") REFERENCES "show" ("id");
 
-ALTER TABLE "show_seat" ADD FOREIGN KEY ("booking") REFERENCES "booking" ("id");
+ALTER TABLE "show_seat" ADD FOREIGN KEY ("booking_id") REFERENCES "booking" ("id");
 
 ALTER TABLE "booking" ADD FOREIGN KEY ("user_id") REFERENCES "user" ("id");
 
