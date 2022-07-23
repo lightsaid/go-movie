@@ -25,6 +25,12 @@ sqlc:
 test:
 	go test -v -cover ./...
 
+api:
+	go run ./cmd/api
+
+web:
+	go run ./cmd/web
+
 godb:
 	docker exec -it postgres-14-alpine psql -U postgres -d db_movie /bin/sh
 

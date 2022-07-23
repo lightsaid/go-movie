@@ -1,0 +1,10 @@
+2022-07-24T00:21:26.742+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
+2022-07-24T00:21:46.743+0800	FATAL	server/server.go:77	Server shutdown error: context deadline exceeded
+lightsaid.com/go-movie/booking/cmd/api/server.(*Server).Run
+	/home/xqq/go/src/lightsaid.com/go-movie/booking/cmd/api/server/server.go:77
+main.main
+	/home/xqq/go/src/lightsaid.com/go-movie/booking/cmd/api/main.go:47
+runtime.main
+	/usr/local/go/src/runtime/proc.go:250
+2022-07-24T00:22:18.718+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
+2022-07-24T00:22:35.005+0800	INFO	server/server.go:80	Stopped Api Server Success.

@@ -10,3 +10,4 @@ select * from city limit $1 offset $2;
 
 -- name: GetAllCity :many
 select * from city;
+
