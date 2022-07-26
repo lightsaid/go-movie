@@ -2,7 +2,7 @@ ApiConfig:
   ApiPort: 0.0.0.0:4000
   RunMode: "debug"
   DBDriver: postgres
-  DBSource: postgresql://postgres:abc123@localhost:5432/db_movie?sslmode=disable
+  DBSource: postgresql://postgres:abc123@localhost:5432/db_movie?sslmode=disable&TimeZone=Asia/Shanghai
   PageSize: 10
   MaxPageSize: 100
 

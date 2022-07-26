@@ -12,3 +12,5 @@ runtime.main
 2022-07-25T19:58:03.142+0800	INFO	server/server.go:82	Stopped Api Server Success.
 2022-07-25T20:41:54.077+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
 2022-07-25T20:41:54.086+0800	INFO	server/server.go:82	Stopped Api Server Success.
+2022-07-26T20:13:17.801+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
+2022-07-26T20:13:17.804+0800	INFO	server/server.go:82	Stopped Api Server Success.

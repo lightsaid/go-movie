@@ -4,8 +4,8 @@ CREATE TABLE "user" (
   "avatar_url" varchar,
   "password" varchar,
   "phone" varchar,
-  "created_at" timestamp NOT NULL DEFAULT (now()),
-  "updated_at" timestamp NOT NULL DEFAULT (now())
+  "created_at" timestamptz NOT NULL DEFAULT (now()),
+  "updated_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE TABLE "oauths" (
@@ -20,7 +20,7 @@ CREATE TABLE "oauths" (
 CREATE TABLE "movie" (
   "id" bigserial PRIMARY KEY,
   "title" varchar NOT NULL,
-  "release_at" timestamp NOT NULL,
+  "release_at" timestamptz NOT NULL,
   "cover_url" varchar NOT NULL,
   "duration" int,
   "language" varchar,
@@ -65,9 +65,9 @@ CREATE TABLE "cinema_seat" (
 
 CREATE TABLE "show" (
   "id" bigserial PRIMARY KEY,
-  "date" timestamp NOT NULL,
-  "start_time" timestamp NOT NULL,
-  "end_time" timestamp NOT NULL,
+  "date" timestamptz NOT NULL,
+  "start_time" timestamptz NOT NULL,
+  "end_time" timestamptz NOT NULL,
   "cinema_hall_id" bigint NOT NULL,
   "movie_id" bigint NOT NULL
 );
@@ -86,7 +86,7 @@ CREATE TABLE "booking" (
   "user_id" bigint NOT NULL,
   "show_id" bigint NOT NULL,
   "seat_number" varchar NOT NULL,
-  "created_at" timestamp NOT NULL DEFAULT (now()),
+  "created_at" timestamptz NOT NULL DEFAULT (now()),
   "status" int NOT NULL
 );
 
@@ -94,7 +94,7 @@ CREATE TABLE "payment" (
   "id" bigserial PRIMARY KEY,
   "booking_id" bigint NOT NULL,
   "amount" decimal(8,2) NOT NULL,
-  "created_at" timestamp NOT NULL DEFAULT (now())
+  "created_at" timestamptz NOT NULL DEFAULT (now())
 );
 
 CREATE UNIQUE INDEX ON "user" ("phone");

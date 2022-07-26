@@ -14,7 +14,7 @@ import (
 func randomMovieParams() []byte {
 	arg := Movie{
 		Title:     utils.RandomString(8),
-		ReleaseAt: time.Now().Local(),
+		ReleaseAt: time.Now(),
 		CoverUrl:  fmt.Sprintf("%s.png", utils.RandomString(10)),
 		Duration:  utils.NullInt32(utils.RandomInt(60, 300)).Int32(),
 		Language:  utils.NullStr(utils.RandomLanguage()).String(),
@@ -45,11 +45,9 @@ func createRandomMovie(t *testing.T, args ...CreateMovieParams) Movie {
 	require.NotEmpty(t, m)
 
 	require.Equal(t, arg.Title, m.Title)
-	fmt.Println(">> ", arg.ReleaseAt.In(local))
-	fmt.Println(">> ", m.ReleaseAt.In(local))
-	// TODO:
-	// require.WithinDuration(t, arg.ReleaseAt.In(local), m.ReleaseAt.In(local), time.Second)
-	// require.Equal(t, fmt.Sprint(arg.ReleaseAt), fmt.Sprint(m.ReleaseAt))
+	fmt.Println(">> ", arg.ReleaseAt)
+	fmt.Println(">> ", m.ReleaseAt)
+	require.WithinDuration(t, arg.ReleaseAt, m.ReleaseAt, time.Second)
 	require.Equal(t, arg.CoverUrl, m.CoverUrl)
 	require.Equal(t, arg.Duration, m.Duration)
 	require.Equal(t, arg.Language, m.Language)
