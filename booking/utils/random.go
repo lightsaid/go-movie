@@ -51,3 +51,14 @@ func RandomGenres() string {
 	genres := []string{"戏剧", "动作", "搞笑", "推理", "武侠", "战争", "言情"}
 	return genres[rand.Intn(len(genres))]
 }
+
+func RandomPhone() string {
+	head := []string{"13", "15", "16", "17", "19"}
+	return fmt.Sprintf("%s%d", head[rand.Intn(len(head))], RandomInt(10000000, 99999999))
+}
+
+func RandomPrice() string {
+	head := RandomInt(1, 100)
+	last := RandomInt(10, 99)
+	return fmt.Sprintf("%d.%d", head, last)
+}

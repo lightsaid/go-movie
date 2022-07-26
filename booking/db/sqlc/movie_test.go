@@ -2,6 +2,7 @@ package db
 
 import (
 	"context"
+	"database/sql"
 	"encoding/json"
 	"fmt"
 	"testing"
@@ -19,7 +20,7 @@ func randomMovieParams() []byte {
 		Duration:  utils.NullInt32(utils.RandomInt(60, 300)).Int32(),
 		Language:  utils.NullStr(utils.RandomLanguage()).String(),
 		Genre:     utils.NullStr(utils.RandomGenres()).String(),
-		Rating:    utils.NullStr(fmt.Sprintf("%d", (utils.RandomInt(1, 5)))).String(),
+		Rating:    sql.NullFloat64{Float64: 4.5, Valid: true},
 		Director:  utils.NullStr(utils.RandomString(4)).String(),
 		Desc:      utils.NullStr(utils.RandomString(20)).String(),
 		Status:    int32(utils.RandomInt(1, 10)),
@@ -125,7 +126,6 @@ func TestGetMovies(t *testing.T) {
 	for _, v := range ms {
 		require.NotEmpty(t, v)
 	}
-
 }
 
 func TestGetMoviesByStatus(t *testing.T) {

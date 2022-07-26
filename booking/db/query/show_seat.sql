@@ -10,5 +10,5 @@ insert into show_seat (
 ) returning *;
 
 -- name: GetShowSeat :one
-select * from show where id = $1;
+select * from show_seat where id = $1;
 

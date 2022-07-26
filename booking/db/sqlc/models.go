@@ -65,7 +65,7 @@ type Movie struct {
 	// 风格/类型
 	Genre sql.NullString `json:"genre"`
 	// 评分
-	Rating sql.NullString `json:"rating"`
+	Rating sql.NullFloat64 `json:"rating"`
 	// 导演
 	Director sql.NullString `json:"director"`
 	// 剧情

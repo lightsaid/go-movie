@@ -50,19 +50,19 @@ func (q *Queries) CreateShowSeat(ctx context.Context, arg CreateShowSeatParams) 
 }
 
 const getShowSeat = `-- name: GetShowSeat :one
-select id, date, start_time, end_time, cinema_hall_id, movie_id from show where id = $1
+select id, cinema_seat_id, show_id, booking_id, status, price from show_seat where id = $1
 `
 
-func (q *Queries) GetShowSeat(ctx context.Context, id int64) (Show, error) {
+func (q *Queries) GetShowSeat(ctx context.Context, id int64) (ShowSeat, error) {
 	row := q.db.QueryRowContext(ctx, getShowSeat, id)
-	var i Show
+	var i ShowSeat
 	err := row.Scan(
 		&i.ID,
-		&i.Date,
-		&i.StartTime,
-		&i.EndTime,
-		&i.CinemaHallID,
-		&i.MovieID,
+		&i.CinemaSeatID,
+		&i.ShowID,
+		&i.BookingID,
+		&i.Status,
+		&i.Price,
 	)
 	return i, err
 }

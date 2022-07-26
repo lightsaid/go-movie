@@ -33,18 +33,18 @@ insert into movie (
 `
 
 type CreateMovieParams struct {
-	Title     string         `json:"title"`
-	ReleaseAt time.Time      `json:"release_at"`
-	CoverUrl  string         `json:"cover_url"`
-	Duration  sql.NullInt32  `json:"duration"`
-	Language  sql.NullString `json:"language"`
-	Genre     sql.NullString `json:"genre"`
-	Rating    sql.NullString `json:"rating"`
-	Director  sql.NullString `json:"director"`
-	Desc      sql.NullString `json:"desc"`
-	Status    int32          `json:"status"`
-	Star      sql.NullString `json:"star"`
-	WishCount sql.NullInt32  `json:"wish_count"`
+	Title     string          `json:"title"`
+	ReleaseAt time.Time       `json:"release_at"`
+	CoverUrl  string          `json:"cover_url"`
+	Duration  sql.NullInt32   `json:"duration"`
+	Language  sql.NullString  `json:"language"`
+	Genre     sql.NullString  `json:"genre"`
+	Rating    sql.NullFloat64 `json:"rating"`
+	Director  sql.NullString  `json:"director"`
+	Desc      sql.NullString  `json:"desc"`
+	Status    int32           `json:"status"`
+	Star      sql.NullString  `json:"star"`
+	WishCount sql.NullInt32   `json:"wish_count"`
 }
 
 func (q *Queries) CreateMovie(ctx context.Context, arg CreateMovieParams) (Movie, error) {
@@ -217,19 +217,19 @@ where id = $1 returning id, title, release_at, cover_url, duration, language, ge
 `
 
 type UpdateMoiveParams struct {
-	ID        int64          `json:"id"`
-	Title     string         `json:"title"`
-	ReleaseAt time.Time      `json:"release_at"`
-	CoverUrl  string         `json:"cover_url"`
-	Duration  sql.NullInt32  `json:"duration"`
-	Language  sql.NullString `json:"language"`
-	Genre     sql.NullString `json:"genre"`
-	Rating    sql.NullString `json:"rating"`
-	Director  sql.NullString `json:"director"`
-	Desc      sql.NullString `json:"desc"`
-	Status    int32          `json:"status"`
-	Star      sql.NullString `json:"star"`
-	WishCount sql.NullInt32  `json:"wish_count"`
+	ID        int64           `json:"id"`
+	Title     string          `json:"title"`
+	ReleaseAt time.Time       `json:"release_at"`
+	CoverUrl  string          `json:"cover_url"`
+	Duration  sql.NullInt32   `json:"duration"`
+	Language  sql.NullString  `json:"language"`
+	Genre     sql.NullString  `json:"genre"`
+	Rating    sql.NullFloat64 `json:"rating"`
+	Director  sql.NullString  `json:"director"`
+	Desc      sql.NullString  `json:"desc"`
+	Status    int32           `json:"status"`
+	Star      sql.NullString  `json:"star"`
+	WishCount sql.NullInt32   `json:"wish_count"`
 }
 
 func (q *Queries) UpdateMoive(ctx context.Context, arg UpdateMoiveParams) (Movie, error) {
