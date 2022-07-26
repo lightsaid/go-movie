@@ -22,10 +22,10 @@ CREATE TABLE "movie" (
   "title" varchar NOT NULL,
   "release_at" timestamp NOT NULL,
   "cover_url" varchar NOT NULL,
-  "duration" timestamp,
+  "duration" int,
   "language" varchar,
   "genre" varchar,
-  "rating" decimal(4,2) DEFAULT '0.0',
+  "rating" float DEFAULT '0.0',
   "director" varchar,
   "desc" varchar,
   "status" int NOT NULL DEFAULT '0',
@@ -35,17 +35,17 @@ CREATE TABLE "movie" (
 
 CREATE TABLE "city" (
   "id" bigserial PRIMARY KEY,
-  "name" varchar(50) NOT NULL,
-  "lat" decimal(10,6) NOT NULL,
-  "long" decimal(10,6) NOT NULL
+  "name" varchar NOT NULL,
+  "lat" decimal NOT NULL,
+  "long" decimal NOT NULL
 );
 
 CREATE TABLE "cinema" (
   "id" bigserial PRIMARY KEY,
   "city_id" bigint NOT NULL,
   "name" varchar(50) NOT NULL,
-  "lat" decimal(10,6) NOT NULL,
-  "long" decimal(10,6) NOT NULL,
+  "lat" decimal NOT NULL,
+  "long" decimal NOT NULL,
   "total_cinema_halls" int NOT NULL
 );
 
@@ -115,7 +115,7 @@ COMMENT ON COLUMN "movie"."release_at" IS '发布时间';
 
 COMMENT ON COLUMN "movie"."cover_url" IS '封面';
 
-COMMENT ON COLUMN "movie"."duration" IS '时长';
+COMMENT ON COLUMN "movie"."duration" IS '时长(单位分钟)';
 
 COMMENT ON COLUMN "movie"."language" IS '语言';
 

@@ -58,8 +58,8 @@ type Movie struct {
 	ReleaseAt time.Time `json:"release_at"`
 	// 封面
 	CoverUrl string `json:"cover_url"`
-	// 时长
-	Duration sql.NullTime `json:"duration"`
+	// 时长(单位分钟)
+	Duration sql.NullInt32 `json:"duration"`
 	// 语言
 	Language sql.NullString `json:"language"`
 	// 风格/类型

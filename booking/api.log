@@ -8,3 +8,7 @@ runtime.main
 	/usr/local/go/src/runtime/proc.go:250
 2022-07-24T00:22:18.718+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
 2022-07-24T00:22:35.005+0800	INFO	server/server.go:80	Stopped Api Server Success.
+2022-07-25T19:58:03.139+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
+2022-07-25T19:58:03.142+0800	INFO	server/server.go:82	Stopped Api Server Success.
+2022-07-25T20:41:54.077+0800	INFO	server/server.go:70	Shuting down server signal: interrupt
+2022-07-25T20:41:54.086+0800	INFO	server/server.go:82	Stopped Api Server Success.

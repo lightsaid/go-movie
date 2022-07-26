@@ -11,3 +11,12 @@ insert into cinema (
 
 -- name: GetCinemaList :many
 select * from cinema limit $1 offset $2;
+
+-- name: UpdateCinema :one
+update cinema set
+  "city_id" = $2,
+  "name" = $3,
+  "lat" = $4,
+  "long" = $5,
+  "total_cinema_halls" = $6
+where id = $1 returning *;

@@ -36,7 +36,7 @@ type CreateMovieParams struct {
 	Title     string         `json:"title"`
 	ReleaseAt time.Time      `json:"release_at"`
 	CoverUrl  string         `json:"cover_url"`
-	Duration  sql.NullTime   `json:"duration"`
+	Duration  sql.NullInt32  `json:"duration"`
 	Language  sql.NullString `json:"language"`
 	Genre     sql.NullString `json:"genre"`
 	Rating    sql.NullString `json:"rating"`
@@ -221,7 +221,7 @@ type UpdateMoiveParams struct {
 	Title     string         `json:"title"`
 	ReleaseAt time.Time      `json:"release_at"`
 	CoverUrl  string         `json:"cover_url"`
-	Duration  sql.NullTime   `json:"duration"`
+	Duration  sql.NullInt32  `json:"duration"`
 	Language  sql.NullString `json:"language"`
 	Genre     sql.NullString `json:"genre"`
 	Rating    sql.NullString `json:"rating"`

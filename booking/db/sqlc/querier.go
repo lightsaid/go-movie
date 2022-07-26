@@ -33,6 +33,8 @@ type Querier interface {
 	GetShowList(ctx context.Context, arg GetShowListParams) ([]Show, error)
 	GetShowSeat(ctx context.Context, id int64) (Show, error)
 	GetUser(ctx context.Context, id int64) (User, error)
+	UpdateCinema(ctx context.Context, arg UpdateCinemaParams) (Cinema, error)
+	UpdateCinemaHall(ctx context.Context, arg UpdateCinemaHallParams) (CinemaHall, error)
 	UpdateCinemaSeat(ctx context.Context, arg UpdateCinemaSeatParams) (CinemaSeat, error)
 	UpdateMoive(ctx context.Context, arg UpdateMoiveParams) (Movie, error)
 	UpdateOauths(ctx context.Context, arg UpdateOauthsParams) (Oauth, error)

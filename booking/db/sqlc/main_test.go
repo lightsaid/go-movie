@@ -5,9 +5,18 @@ import (
 	"log"
 	"os"
 	"testing"
+	"time"
 
 	_ "github.com/lib/pq"
 )
+
+var local *time.Location
+
+func init() {
+	local = time.FixedZone("CST", 8*3600) // 东八
+	// local, _ = time.LoadLocation("Asia/Shanghai")
+	time.Local = local
+}
 
 var testQueries *Queries
 var testDB *sql.DB

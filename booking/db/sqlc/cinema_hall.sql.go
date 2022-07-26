@@ -73,3 +73,35 @@ func (q *Queries) GetCinemaHallList(ctx context.Context, arg GetCinemaHallListPa
 	}
 	return items, nil
 }
+
+const updateCinemaHall = `-- name: UpdateCinemaHall :one
+update cinema_hall set
+  "cinema_id" = $2,
+  "name" = $3,
+  "total_seats" = $4
+where id = $1 returning id, cinema_id, name, total_seats
+`
+
+type UpdateCinemaHallParams struct {
+	ID         int64  `json:"id"`
+	CinemaID   int64  `json:"cinema_id"`
+	Name       string `json:"name"`
+	TotalSeats int32  `json:"total_seats"`
+}
+
+func (q *Queries) UpdateCinemaHall(ctx context.Context, arg UpdateCinemaHallParams) (CinemaHall, error) {
+	row := q.db.QueryRowContext(ctx, updateCinemaHall,
+		arg.ID,
+		arg.CinemaID,
+		arg.Name,
+		arg.TotalSeats,
+	)
+	var i CinemaHall
+	err := row.Scan(
+		&i.ID,
+		&i.CinemaID,
+		&i.Name,
+		&i.TotalSeats,
+	)
+	return i, err
+}

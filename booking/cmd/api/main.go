@@ -3,7 +3,6 @@ package main
 import (
 	"database/sql"
 	"log"
-	"time"
 
 	"lightsaid.com/go-movie/booking/cmd/api/server"
 	db "lightsaid.com/go-movie/booking/db/sqlc"
@@ -11,10 +10,6 @@ import (
 
 	_ "github.com/lib/pq"
 )
-
-func init() {
-	time.LoadLocation("Asia/Shanghai")
-}
 
 func main() {
 	// 加载配置

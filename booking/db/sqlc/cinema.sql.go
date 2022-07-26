@@ -87,3 +87,43 @@ func (q *Queries) GetCinemaList(ctx context.Context, arg GetCinemaListParams) ([
 	}
 	return items, nil
 }
+
+const updateCinema = `-- name: UpdateCinema :one
+update cinema set
+  "city_id" = $2,
+  "name" = $3,
+  "lat" = $4,
+  "long" = $5,
+  "total_cinema_halls" = $6
+where id = $1 returning id, city_id, name, lat, long, total_cinema_halls
+`
+
+type UpdateCinemaParams struct {
+	ID               int64  `json:"id"`
+	CityID           int64  `json:"city_id"`
+	Name             string `json:"name"`
+	Lat              string `json:"lat"`
+	Long             string `json:"long"`
+	TotalCinemaHalls int32  `json:"total_cinema_halls"`
+}
+
+func (q *Queries) UpdateCinema(ctx context.Context, arg UpdateCinemaParams) (Cinema, error) {
+	row := q.db.QueryRowContext(ctx, updateCinema,
+		arg.ID,
+		arg.CityID,
+		arg.Name,
+		arg.Lat,
+		arg.Long,
+		arg.TotalCinemaHalls,
+	)
+	var i Cinema
+	err := row.Scan(
+		&i.ID,
+		&i.CityID,
+		&i.Name,
+		&i.Lat,
+		&i.Long,
+		&i.TotalCinemaHalls,
+	)
+	return i, err
+}
