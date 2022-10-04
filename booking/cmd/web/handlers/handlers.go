@@ -1,4 +1,4 @@
-package server
+package handlers
 
 import (
 	"context"
@@ -15,13 +15,13 @@ import (
 )
 
 type Server struct {
-	config  *utils.ApiConfig
+	config  *utils.WebConfig
 	querier db.Querier
 	router  *gin.Engine
 }
 
 // NewServer 创建一个 api server
-func NewServer(config *utils.ApiConfig, querier db.Querier) *Server {
+func NewServer(config *utils.WebConfig, querier db.Querier) *Server {
 	srv := &Server{
 		config:  config,
 		querier: querier,
@@ -33,10 +33,8 @@ func NewServer(config *utils.ApiConfig, querier db.Querier) *Server {
 	}
 	router.Use(gin.Logger())
 
-	router.Group("/api/v1/")
-	{
-		router.GET("/ping", srv.ping)
-		router.GET("/cities", srv.getCity)
+	if err := srv.routes(router); err != nil {
+		zap.S().Panic(err)
 	}
 
 	srv.router = router

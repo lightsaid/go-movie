@@ -18,6 +18,6 @@ func TestLoadConfig(t *testing.T) {
 	require.Equal(t, config.RunMode, "debug")
 	require.Equal(t, config.DBDriver, "postgres")
 	require.Contains(t, config.DBSource, "postgres")
-	require.Contains(t, config.ApiPort, "4000")
+	require.Contains(t, config.ServePort, "4000")
 
 }

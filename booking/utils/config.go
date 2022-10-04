@@ -3,7 +3,7 @@ package utils
 import "github.com/spf13/viper"
 
 type ApiConfig struct {
-	ApiPort     string `mapstructure:"ApiPort"`
+	ServePort   string `mapstructure:"ServePort"`
 	RunMode     string `mapstructure:"RunMode"`
 	DBDriver    string `mapstructure:"DBDriver"`
 	DBSource    string `mapstructure:"DBSource"`
@@ -12,7 +12,7 @@ type ApiConfig struct {
 }
 
 type WebConfig struct {
-	ApiPort     string `mapstructure:"ApiPort"`
+	ServePort   string `mapstructure:"ServePort"`
 	RunMode     string `mapstructure:"RunMode"`
 	DBDriver    string `mapstructure:"DBDriver"`
 	DBSource    string `mapstructure:"DBSource"`

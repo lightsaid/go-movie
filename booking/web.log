@@ -1,0 +1,109 @@
+2022-08-05T08:11:38.681+0800	INFO	handlers/handlers.go:70	Shuting down server signal: interrupt
+2022-08-05T08:11:38.683+0800	INFO	handlers/handlers.go:82	Stopped Api Server Success.
+2022-08-05T08:11:42.117+0800	INFO	handlers/handlers.go:57	Starting web server on 
+
+2022-08-05T08:11:42.120+0800	FATAL	handlers/handlers.go:59	srv.ListenAndServe err: listen tcp :80: bind: permission denied
+lightsaid.com/go-movie/booking/cmd/web/handlers.(*Server).Run.func1
+	/home/xqq/go/src/lightsaid.com/go-movie/booking/cmd/web/handlers/handlers.go:59
+2022-08-05T08:12:53.604+0800	INFO	handlers/handlers.go:57	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:27:29.891+0800	INFO	handlers/handlers.go:71	Shuting down server signal: interrupt
+2022-08-05T09:27:29.908+0800	INFO	handlers/handlers.go:83	Stopped Api Server Success.
+2022-08-05T09:27:35.222+0800	INFO	handlers/handlers.go:58	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:29:43.138+0800	INFO	handlers/handlers.go:72	Shuting down server signal: interrupt
+2022-08-05T09:29:43.140+0800	INFO	handlers/handlers.go:84	Stopped Api Server Success.
+2022-08-05T09:29:55.575+0800	INFO	handlers/handlers.go:58	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:36:37.106+0800	INFO	handlers/handlers.go:72	Shuting down server signal: interrupt
+2022-08-05T09:36:37.109+0800	INFO	handlers/handlers.go:84	Stopped Api Server Success.
+2022-08-05T09:36:40.215+0800	INFO	handlers/handlers.go:61	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:39:12.041+0800	INFO	handlers/handlers.go:75	Shuting down server signal: interrupt
+2022-08-05T09:39:12.044+0800	INFO	handlers/handlers.go:87	Stopped Api Server Success.
+2022-08-05T09:39:13.605+0800	INFO	handlers/handlers.go:61	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:48:16.000+0800	INFO	handlers/handlers.go:75	Shuting down server signal: interrupt
+2022-08-05T09:48:16.002+0800	INFO	handlers/handlers.go:87	Stopped Api Server Success.
+2022-08-05T09:54:10.861+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T09:57:29.773+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T09:57:29.775+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T09:57:33.573+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T10:01:30.493+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T10:01:30.494+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T10:01:40.977+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T10:03:32.660+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T10:03:32.662+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T10:03:35.675+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T10:07:08.119+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T10:07:08.121+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T10:32:26.049+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:02:16.628+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:02:16.630+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:02:20.404+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:02:42.640+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:02:42.641+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:02:45.695+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:03:42.656+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:03:42.657+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:03:46.220+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:04:10.204+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:04:10.205+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:04:13.799+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:10:56.058+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:10:56.060+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:10:58.900+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:11:16.467+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:11:16.468+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:11:19.621+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:12:49.977+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:12:49.978+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:12:53.001+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:17:32.146+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:17:32.147+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:17:33.997+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:18:39.342+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:18:39.344+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:18:42.066+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:20:29.217+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:20:29.218+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:20:32.502+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:26:05.923+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:26:05.924+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:26:09.184+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:30:32.757+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:30:32.758+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:30:36.010+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:30:49.323+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:30:49.325+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:30:52.364+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:37:32.776+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:37:32.777+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:37:35.646+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:38:01.866+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:38:01.868+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:38:05.138+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+
+2022-08-05T11:41:06.590+0800	INFO	handlers/handlers.go:69	Shuting down server signal: interrupt
+2022-08-05T11:41:06.592+0800	INFO	handlers/handlers.go:81	Stopped Api Server Success.
+2022-08-05T11:41:09.947+0800	INFO	handlers/handlers.go:55	Starting web server on 0.0.0.0:5000
+

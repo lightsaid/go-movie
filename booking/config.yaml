@@ -1,5 +1,5 @@
 ApiConfig:
-  ApiPort: 0.0.0.0:4000
+  ServePort: 0.0.0.0:4000
   RunMode: "debug"
   DBDriver: postgres
   DBSource: postgresql://postgres:abc123@localhost:5432/db_movie?sslmode=disable
@@ -7,7 +7,7 @@ ApiConfig:
   MaxPageSize: 100
 
 WebConfig:
-  WebPort: 0.0.0.0:4005
+  ServePort: 0.0.0.0:5000
   RunMode: "debug"
   DBDriver: postgres
   DBSource: postgresql://postgres:abc123@localhost:5432/db_movie?sslmode=disable
